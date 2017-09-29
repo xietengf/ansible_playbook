@@ -1,0 +1,27 @@
+---
+- hosts: all
+  tasks:
+  - name: "更新所有补丁"
+    yum:
+      name: "*"
+      state: latest
+  - name: "安装图形化配置工具setup"
+    yum:
+      name: setuptool
+      state: latest
+  - name: "安装图形化配置工具ntsysv"
+    yum:
+      name: ntsysv
+      state: latest
+  - name: "安装图形化配置工具system-config-network-tui"
+    yum:
+      name: system-config-network-tui
+      state: latest
+  - name: "安装vim工具"
+    yum:
+      name: vim
+      state: latest
+  - name: "安装lrzsz"
+    yum:
+      name: lrzsz
+      state: latest
